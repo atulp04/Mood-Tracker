@@ -1,0 +1,35 @@
+Develop a web application called "Mood Tracker & Insights" designed to help middle-aged Indian professionals monitor and understand their emotional patterns. The application should include the following features:
+
+1.  **Intuitive Mood Selection:**
+    * Provide a visual mood selection interface using culturally relevant emoticons or icons that resonate with Indian users.
+    * Include text labels with concise descriptions of each mood to ensure clarity.
+    * Implement a user-friendly hover or tap interaction to display the mood labels.
+
+2.  **Contextual Notes Input:**
+    * Offer a text area for users to record brief, context-rich notes about their daily experiences and feelings.
+    * Add a character limit so the notes stay brief.
+
+3.  **Local Data Storage:**
+    * Utilize browser local storage to securely store mood entries, ensuring user privacy.
+
+4.  **Visual Trend Analysis:**
+    * Create a dashboard that displays a chronological history of mood entries.
+    * Integrate a clear and concise trend chart to visualize mood patterns over time.
+    * Use color coding that resonates with the user.
+    * Provide the ability to view trends over weekly or monthly periods.
+
+5.  **Basic Pattern Recognition & Suggestions:**
+    * When the user has entered mood data for 7 days, provide basic pattern recognition. Example: "It looks like your mood tends to lower on Wednesdays."
+    * Provide some very basic suggestions. Example: "If you feel your mood lowering, try taking a 10 minute break."
+    * The suggestions should be culturally sensitive.
+
+6.  **User-Centric Design:**
+    * Ensure the user interface is clean, intuitive, and culturally appropriate.
+    * Prioritize accessibility and ease of use.
+    * Use fonts that are easy to read.
+
+7.  **Code Clarity & Extensibility:**
+    * Write clean, well-commented HTML, CSS, and JavaScript code.
+    * Structure the code to facilitate future enhancements, particularly the integration of more advanced AI-driven insights.
+
+The application should be optimized for use on desktop and mobile devices.
