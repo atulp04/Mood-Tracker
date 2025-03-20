@@ -1,0 +1,364 @@
+/* 
+    Mood Tracker & Insights - Custom Styles
+    Designed for middle-aged Indian professionals
+    Colors are chosen to be culturally relevant and provide clear visual cues
+*/
+
+:root {
+    /* Color palette - Using colors that resonate with Indian culture */
+    --primary-color: #1e88e5;       /* Deep blue - represents trust and calmness */
+    --secondary-color: #ff9800;     /* Amber/Orange - represents energy and warmth */
+    --very-happy-color: #4caf50;    /* Green - represents joy and growth */
+    --happy-color: #8bc34a;         /* Light green */
+    --neutral-color: #ffeb3b;       /* Yellow - represents balance */
+    --frustrated-color: #ff5722;    /* Deep Orange - represents frustration */
+    --angry-color: #e53935;         /* Red - represents anger */
+    --sad-color: #ff9800;           /* Orange - represents mild discomfort */
+    --very-sad-color: #f44336;      /* Red - represents strong emotions */
+    --text-dark: #333333;           /* Dark gray for text */
+    --text-light: #f5f5f5;          /* Light gray/white for text on dark backgrounds */
+    --border-color: #dddddd;        /* Light gray for borders */
+    --background-light: #f9f9f9;    /* Very light gray for backgrounds */
+}
+
+body {
+    font-family: 'Poppins', 'Tiro Devanagari Hindi', sans-serif;
+    color: var(--text-dark);
+    background-color: #f0f5fa;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #1565c0;
+    border-color: #1565c0;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+}
+
+/* Mood Selector Styles */
+.mood-selector {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.mood-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.mood-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mood-option.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(30, 136, 229, 0.1);
+}
+
+.mood-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.mood-label {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Color coding for different moods */
+.mood-option[data-mood="very_happy"] .mood-icon {
+    color: var(--very-happy-color);
+}
+
+.mood-option[data-mood="happy"] .mood-icon {
+    color: var(--happy-color);
+}
+
+.mood-option[data-mood="neutral"] .mood-icon {
+    color: var(--neutral-color);
+}
+
+.mood-option[data-mood="frustrated"] .mood-icon {
+    color: var(--frustrated-color);
+}
+
+.mood-option[data-mood="angry"] .mood-icon {
+    color: var(--angry-color);
+}
+
+.mood-option[data-mood="sad"] .mood-icon {
+    color: var(--sad-color);
+}
+
+.mood-option[data-mood="very_sad"] .mood-icon {
+    color: var(--very-sad-color);
+}
+
+/* Chart and history containers */
+.chart-container {
+    position: relative;
+    height: 250px;
+    margin-bottom: 1rem;
+}
+
+.mood-history-item {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--primary-color);
+    background-color: var(--background-light);
+}
+
+.mood-history-date {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.mood-history-emoji {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.mood-history-note {
+    margin-top: 8px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Insights and suggestions styles */
+#insightsCard {
+    border-left: 5px solid var(--secondary-color);
+}
+
+.insight-item, .suggestion-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: var(--background-light);
+}
+
+.insight-item i, .suggestion-item i {
+    color: var(--secondary-color);
+    margin-right: 8px;
+}
+
+/* Broaden & Build Theory styling */
+.suggestion-item.broaden-build {
+    background-color: rgba(76, 175, 80, 0.1); /* Light green background */
+    border-left: 4px solid var(--very-happy-color);
+    padding: 12px 15px;
+}
+
+.suggestion-item.broaden-build i {
+    color: var(--very-happy-color);
+}
+
+.suggestion-item.broaden-build strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--very-happy-color);
+}
+
+/* Theory info box styling */
+.theory-info {
+    padding: 10px 12px;
+    background-color: rgba(30, 136, 229, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mood-selector {
+        gap: 5px;
+    }
+    
+    .mood-option {
+        width: 18%;
+        padding: 8px 2px;
+    }
+    
+    .mood-icon {
+        font-size: 1.5rem;
+    }
+    
+    .mood-label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .chart-container {
+        height: 200px;
+    }
+}
+
+/* Animation for mood selection */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.mood-option.selected {
+    animation: pulse 1s infinite;
+}
+
+/* Improve form elements */
+textarea.form-control:focus,
+input.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(30, 136, 229, 0.25);
+}
+
+/* Help icon styling */
+.help-icon {
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.help-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Badge styling for mood indicators */
+.badge-mood {
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.badge-very-happy {
+    background-color: var(--very-happy-color);
+    color: white;
+}
+
+.badge-happy {
+    background-color: var(--happy-color);
+    color: white;
+}
+
+.badge-neutral {
+    background-color: var(--neutral-color);
+    color: var(--text-dark);
+}
+
+.badge-frustrated {
+    background-color: var(--frustrated-color);
+    color: white;
+}
+
+.badge-angry {
+    background-color: var(--angry-color);
+    color: white;
+}
+
+.badge-sad {
+    background-color: var(--sad-color);
+    color: white;
+}
+
+.badge-very-sad {
+    background-color: var(--very-sad-color);
+    color: white;
+}
+
+/* Custom tooltip styling */
+.custom-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+/* Test panel styling */
+#testPanel {
+    background-color: #f8f9fa;
+    border-right: 4px solid #495057;
+    z-index: 100;
+    display: none; /* Hidden by default */
+}
+
+#testPanel .card-header {
+    background-color: #495057;
+    color: white;
+}
+
+#testPanel .btn-close-white {
+    opacity: 0.8;
+}
+
+#testPanel .btn-close-white:hover {
+    opacity: 1;
+}
+
+#testPanel small.text-muted {
+    font-size: 0.7rem;
+}
+
+#testPanel .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+#testPanel .btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+#testPanel .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
